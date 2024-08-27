@@ -1,0 +1,121 @@
+body {
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000000; /* Black background */
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Position relative to allow positioning of Arabic text */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+h1 {
+    font-size: 5em; /* Large counter */
+    color: #ffffff; /* White color for counter */
+    margin-bottom: 20px;
+}
+
+.circle-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Space between buttons */
+    margin-bottom: 20px;
+}
+
+.increment, .decrement {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    background-color: #800000; /* Maroon color */
+    border-radius: 50%;
+}
+
+.increment {
+    width: 150px; /* Larger size */
+    height: 150px; /* Larger size */
+}
+
+.decrement {
+    width: 100px; /* Smaller size */
+    height: 100px; /* Smaller size */
+}
+
+.increment svg, .decrement svg {
+    fill: none; /* No fill color */
+    stroke: #ff9999; /* Light red color */
+    stroke-width: 2; /* Adjust width if needed */
+}
+
+.increment svg {
+    width: 60px;
+    height: 60px;
+}
+
+.decrement svg {
+    width: 40px;
+    height: 40px;
+}
+
+/* Glow and outline animation */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px rgba(255, 182, 193, 0.5), 0 0 10px rgba(255, 182, 193, 0.5), 0 0 15px rgba(255, 182, 193, 0.5);
+        border: 2px solid rgba(255, 182, 193, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 10px rgba(255, 182, 193, 0.7), 0 0 20px rgba(255, 182, 193, 0.7), 0 0 30px rgba(255, 182, 193, 0.7);
+        border: 2px solid rgba(255, 182, 193, 0.7);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(255, 182, 193, 0.5), 0 0 10px rgba(255, 182, 193, 0.5), 0 0 15px rgba(255, 182, 193, 0.5);
+        border: 2px solid rgba(255, 182, 193, 0.5);
+    }
+}
+
+.increment:active, .decrement:active {
+    animation: glow 0.5s ease-out;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #000000; /* Match background */
+    color: #ffffff; /* White text */
+    border: 2px solid #ffffff; /* White border */
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #333333; /* Darker shade on hover */
+}
+
+.arabic-text {
+    position: absolute;
+    font-size: 5em; /* Same size as the counter */
+    color: #ffffff; /* White color for text */
+}
+
+.left {
+    left: 15%; /* Distance from the left side */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center vertically */
+}
+
+.right {
+    right: 15%; /* Distance from the right side */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center vertically */
+}

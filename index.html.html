@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter with Arabic Text</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="arabic-text left">
+            الله أكبر
+        </div>
+        <h1 id="counter">0</h1>
+        <div class="circle-container">
+            <div class="increment" onclick="increment()">
+                <!-- Up arrow SVG -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="arrow-up" width="60" height="60">
+                    <path d="M19 15l-7-7-7 7" fill="none" stroke="#ff9999" stroke-width="2"/>
+                </svg>
+            </div>
+            <div class="decrement" onclick="decrement()">
+                <!-- Down arrow SVG -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="arrow-down" width="40" height="40">
+                    <path d="M19 9l-7 7-7-7" fill="none" stroke="#ff9999" stroke-width="2"/>
+                </svg>
+            </div>
+        </div>
+        <button onclick="reset()">Reset</button>
+        <button onclick="toggleEdit()">Edit</button>
+        <input id="editInput" type="text" style="display:none;" onblur="saveCounter()">
+    </div>
+    <div class="arabic-text right">
+        أستغفر الله
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
